@@ -1,0 +1,26 @@
+﻿@model Person
+
+<div id="@("person" + Model.Id)" class="col-12">
+
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd><input type="text" id="@("person" + Model.Id + "Name")" value="@Model.Name" /></dd>
+        <dt>City</dt>
+        <dd><input type="text" id="@("person" + Model.Id + "City")" value="@Model.City" /></dd>
+        <dt>Phone</dt>
+        <dd><input type="text" id="@("person" + Model.Id + "Phone")" value="@Model.Phone" /></dd>
+        <dt>
+            <button class="btn btn-success"
+                    onclick="LinkEdit('@Url.Action("Edit", "People", new { id = Model.Id})','@("person" + Model.Id)', '@Model.Id')">
+                Save
+            </button>
+        </dt>
+        <dd>
+            <button class="btn btn-secondary"
+                    onclick="LinkUpdate('@Url.Action("Person", "People", new { id = Model.Id})','@("person" + Model.Id)')">
+                Back
+            </button>
+        </dd>
+    </dl>
+
+</div>

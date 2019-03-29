@@ -1,0 +1,20 @@
+﻿<div class="row">
+    <div class="col-12">
+        @if(ViewBag.CreateFail != null)
+        {
+        <div class="row">@ViewBag.CreateFail</div>
+        }
+        <div class="row">
+            <div class="col">Name:<input type="text" id="createName" name="createName" /></div>
+            <div class="col">City:<input type="text" id="createCity" name="createCity" /></div>
+            <div class="col">Phone:<input type="text" id="createPhone" name="createPhone" /></div>
+            <div class="col">
+                <button class="btn btn-success"
+                        onclick="LinkCreate('@Url.Action("Create", "People")')">
+                    Create
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

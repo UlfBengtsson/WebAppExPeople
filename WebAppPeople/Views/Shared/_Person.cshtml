@@ -1,0 +1,30 @@
+﻿@model Person
+
+<div id="@("person" + Model.Id)" class="col-12 listrow">
+    <div class="row">
+        <div class="col">@Model.Name</div>
+        <div class="col">@Model.City</div>
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-info"
+                            onclick="LinkUpdate('@Url.Action("Details", "People", new { id = Model.Id})','@("person" + Model.Id)')">
+                        Details
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-warning"
+                            onclick="LinkUpdate('@Url.Action("Edit", "People", new { id = Model.Id})','@("person" + Model.Id)')">
+                        Edit
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-danger"
+                            onclick="LinkUpdate('@Url.Action("Delete", "People", new { id = Model.Id})','@("person" + Model.Id)')">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

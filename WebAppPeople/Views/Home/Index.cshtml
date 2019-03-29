@@ -1,0 +1,34 @@
+﻿@model List<Person>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>People list</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-12">
+        <input type="text" name="filter" id="filterlist" placeholder="Search on Name or City" />
+        <button onclick="LinkFilter('@Url.Action("Filter","People")')">Search</button>
+    </div>
+</div>
+
+<hr />
+
+@*@await Html.PartialAsync("_Create")*@
+<partial name="_Create" />
+
+<hr />
+
+<div class="row">
+    <div class="col"><b>Name</b></div>
+    <div class="col"><b>City</b></div>
+    <div class="col"><b>Options</b></div>
+</div>
+<hr />
+<div id="peoplelist" class="row">
+
+    @await Html.PartialAsync("_List", Model)
+
+</div>

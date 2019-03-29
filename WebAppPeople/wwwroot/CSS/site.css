@@ -1,0 +1,59 @@
+﻿body {
+    background-color: gray;
+}
+
+.container-fluid {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    background-color: #a4a4a4;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    border-top: 3px solid gray;
+    background-color: black;
+}
+
+footer p {
+    text-align:center;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .dl-horizontal dt {
+        float: left;
+        width: 160px;
+        overflow: hidden;
+        clear: left;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd, dt {
+    line-height: 1.42857143;
+}
+
+@media (min-width: 768px) {
+    .dl-horizontal dd {
+        margin-left: 180px;
+    }
+}
+
+.listrow {
+    background-color: #bababa;
+    padding: 5px 15px 5px 15px;
+    line-height: 2.4;
+}
+
+.listrow:nth-child(even) {
+    background-color: #a4a4a4;
+}

@@ -1,0 +1,21 @@
+﻿@model Person
+
+<div id="@("person" + Model.Id)" class="col-12">
+
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>@Model.Name</dd>
+        <dt>City</dt>
+        <dd>@Model.City</dd>
+        <dt>Phone</dt>
+        <dd>@Model.Phone</dd>
+        <dt></dt>
+        <dd>
+            <button class="btn btn-secondary aUpdate"
+                    onclick="LinkUpdate('@Url.Action("Person", "People", new { id = Model.Id})','@("person" + Model.Id)')">
+                Back
+            </button>
+        </dd>
+    </dl>
+
+</div>
